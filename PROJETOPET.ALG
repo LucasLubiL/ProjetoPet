@@ -2,14 +2,14 @@ Algoritmo "ProjetoPet"
 
 Var
 
-   //identificaçao
+   //identificaÃ§ao
    NomeJogador:caractere
    NomePet:caractere
    AvancarTempo:caractere
    Comecar:inteiro
    Opcao:inteiro
 
-   //atribuiçoes
+   //atribuiÃ§oes
    desligar:inteiro
    fome:inteiro
    felicidade:inteiro
@@ -43,25 +43,25 @@ Inicio
    escreval("               Seja Bem Vindo ao MUNDO YourPet!!!")
    escreval
    escreval
-   escreval("Digite 1 para começar!")
+   escreval("Digite 1 para comeÃ§ar!")
    leia(Comecar)
    limpatela
    enquanto (Comecar<>1) faca
-      escreval("Digite 1 para começar!")
+      escreval("Digite 1 para comeÃ§ar!")
       leia(Comecar)
    fimenquanto
    escreval
-   escreval("Olá,qual é o seu nome?<(^_^)>")
+   escreval("OlÃ¡,qual Ã© o seu nome?<(^_^)>")
    leia(NomeJogador)
    limpatela
    escreval
-   escreval("Muito Bem ",NomeJogador,"!Para começarmos,primeiro,dê um nome ao seu Pet!")
+   escreval("Muito Bem ",NomeJogador,"!Para comeÃ§armos,primeiro,dÃª um nome ao seu Pet!")
    escreval
    escreval("Nome do Pet:")
    leia(NomePet)
    limpatela
 
-   escreval("Esse é ",NomePet)
+   escreval("Esse Ã© ",NomePet)
    escreval("       _=,_              ")
    escreval("    o_/6 /#\             ")
    escreval("    \__ |##/             ")
@@ -71,7 +71,7 @@ Inicio
    escreval("        |/ \_( # |       ")
    escreval("       C/ ,--___/        ")
 
-   escreval("Essas são as atribuiçoês atual de seu Pet ",NomePet)
+   escreval("Essas sÃ£o as atribuiÃ§oÃªs atual de seu Pet ",NomePet)
    escreval
    escreval
    temp<-0
@@ -87,27 +87,16 @@ Inicio
    escreval
    escreval
    enquanto (idade<7)e(felicidade>0)e(fome<10)e(limpeza>0)e(desligar<>1) faca
+
       se (doenca=verdadeiro) entao
          escreval("O ",NomePet," continua doente.")
          escreval
          escreval
       fimse
 
-
-      doencaChance <- randi(31)
-      se(doenca=falso)entao
-         se(doencaChance = 15) entao
-            doenca <- verdadeiro
-            escreval(nomePet," está Doente")
-            chanceCura <- randi(101)
-            escreval
-         fimse
-      fimse
-
-
-      escreval("Escolha uma opção a seguir: ")
+      escreval("Escolha uma opÃ§Ã£o a seguir: ")
       escreval
-      escreval("1. Avançar o tempo")
+      escreval("1. AvanÃ§ar o tempo")
       escreval("2. Alimentar")
       escreval("3. Jogar")
       escreval("4. Dar banho")
@@ -120,14 +109,23 @@ Inicio
       escolha(Opcao)
 
       caso 1
+          doencaChance <- randi(101)
+          se(doenca=falso)entao
+             se(doencaChance<10) entao
+               doenca <- verdadeiro
+               escreval(nomePet," estÃ¡ Doente")
+               chanceCura <- randi(101)
+               escreval
+             fimse
+          fimse
          temp <- temp + 8
          se(doenca = verdadeiro) entao
             tempoDoente<-tempoDoente + 8
-            escreval("A chance dele se curar é de ",chanceCura)
+            escreval("A chance dele se curar Ã© de ",chanceCura)
             se(tempoDoente = 8) entao
                se(chanceCura < 33.3) entao
                   doenca <- falso
-                  escreval("A gripe foi curada,após 8 horas!")
+                  escreval("A gripe foi curada,apÃ³s 8 horas!")
                   tempoDoente<-0
                   escreval
                fimse
@@ -136,7 +134,7 @@ Inicio
             se(tempoDoente = 16) entao
                se(chanceCura < 66.6) entao
                   doenca <- falso
-                  escreval("A gripe foi curada,após 16 horas!")
+                  escreval("A gripe foi curada,apÃ³s 16 horas!")
                   tempoDoente<-0
                   escreval
                fimse
@@ -144,7 +142,7 @@ Inicio
             
             se(tempoDoente = 24) entao
                doenca <- falso
-               escreval("A gripe foi curada,após 24 horas!")
+               escreval("A gripe foi curada,apÃ³s 24 horas!")
                tempoDoente<-0
                escreval
             fimse
@@ -159,11 +157,11 @@ Inicio
             //contTempo<-contTempo+1
          fimse
          escreval("Horas do Dias:",temp)
-         escreval("A idade de ",NomePet," agora é ",idade)
+         escreval("A idade de ",NomePet," agora Ã© ",idade)
          escreval
          escreval
 
-         //escreval("A fome de ",NomePet, " é de ",fome)
+         //escreval("A fome de ",NomePet, " Ã© de ",fome)
 
       caso 2
          se(fome=0)entao
@@ -194,7 +192,7 @@ Inicio
          leia(jogadaDono)
          jogadaPet<-randi(3)
          se(jogadaDono=jogadaPet)entao
-            escreval("Houve um empate,que pena! (•_•)")
+            escreval("Houve um empate,que pena! (â€¢_â€¢)")
             escreval
             escreval
             empate<-empate+1
@@ -211,7 +209,7 @@ Inicio
                se(jogadaDono=0)e(jogadaPet=2)entao
                   escreval(NomeJogador,":Pedra X ",NomePet,":Tesoura")
                   escreval
-                  escreval("Parabéns,você ganhou! (•_•)")
+                  escreval("ParabÃ©ns,vocÃª ganhou! (â€¢_â€¢)")
                   escreval
                   escreval
                   vitoriaDono<-vitoriaDono+1
@@ -221,7 +219,7 @@ Inicio
                   se(jogadaDono=1)e(jogadaPet=0)entao
                      escreval(NomeJogador,":Papel X ",NomePet,":Pedra")
                      escreval
-                     escreval("Parabéns,você ganhou! (•_•)")
+                     escreval("ParabÃ©ns,vocÃª ganhou! (â€¢_â€¢)")
                      escreval
                      escreval
                      vitoriaDono<-vitoriaDono+1
@@ -248,7 +246,7 @@ Inicio
                            se(jogadaDono=2)e(jogadaPet=1)entao
                               escreval(NomeJogador,":Tesoura X ",NomePet,":Papel")
                               escreval
-                              escreval("Parabéns,você ganhou!(•_•)")
+                              escreval("ParabÃ©ns,vocÃª ganhou!(â€¢_â€¢)")
                               escreval
                               escreval
                               vitoriaDono<-vitoriaDono+1
@@ -264,7 +262,7 @@ Inicio
 
       caso 4
          se(limpeza=10)entao
-            escreval("O ",NomePet," ja estava limpo,agora ele ficou triste (•_•)")
+            escreval("O ",NomePet," ja estava limpo,agora ele ficou triste (â€¢_â€¢)")
             felicidade<-felicidade-6
             escreval
             escreval
@@ -281,7 +279,7 @@ Inicio
 
 
       caso 5
-         escreval("O status atual de ",NomePet," é de:")
+         escreval("O status atual de ",NomePet," Ã© de:")
          escreval
          escreval("Fome:",fome)
          se(felicidade>10)entao
@@ -290,7 +288,7 @@ Inicio
          escreval("Felicidade:",felicidade)
          escreval("Limpeza:",limpeza)
          escreval("Idade(Dias Vivos):",idade)
-         escreval("Estatística Jogo:",vitoriaDono," vitorias de ",NomeJogador," e ",vitoriaPet," vitorias de ",NomePet)
+         escreval("EstatÃ­stica Jogo:",vitoriaDono," vitorias de ",NomeJogador," e ",vitoriaPet," vitorias de ",NomePet)
          escreval
          escreval
 
@@ -315,7 +313,7 @@ Inicio
                escreval("O ",NomePet," morreu super sujo _(x.x)_")
             senao
                se(idade=7)entao
-                  escreval("Parabéns,seu Pet viveu os 7 dias consecutivos!!!Eis um funeral digno _(x.x)_")
+                  escreval("ParabÃ©ns,seu Pet viveu os 7 dias consecutivos!!!Eis um funeral digno _(x.x)_")
                fimse
             fimse
          fimse
