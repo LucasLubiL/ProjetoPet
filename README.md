@@ -7,6 +7,26 @@ Saulo Carvalho ✌️
 Cristiano Rodrigues🖖
 
 
+
+
+
+
+
+
+
+BUGS:linha138(escreval)
+
+
+
+
+
+
+
+
+
+
+
+
                       $$$$$$$$                             
                $$$$$$$        $$$$$$$$$                    
              $$                        $$$$                
