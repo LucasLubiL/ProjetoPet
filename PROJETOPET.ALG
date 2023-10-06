@@ -2,14 +2,17 @@ Algoritmo "ProjetoPet"
 
 Var
 
-   //identificaÃ§ao
+   //identificaçao
    NomeJogador:caractere
    NomePet:caractere
    AvancarTempo:caractere
    Comecar:inteiro
+   Comecar2:inteiro
    Opcao:inteiro
+   ENTER:caractere
+   F:caractere
 
-   //atribuiÃ§oes
+   //atribuiçoes
    desligar:inteiro
    fome:inteiro
    felicidade:inteiro
@@ -43,50 +46,114 @@ Inicio
    escreval("               Seja Bem Vindo ao MUNDO YourPet!!!")
    escreval
    escreval
-   escreval("Digite 1 para comeÃ§ar!")
+   escreval("Digite 1 para começar!")
+   escreval
    leia(Comecar)
    limpatela
    enquanto (Comecar<>1) faca
-      escreval("Digite 1 para comeÃ§ar!")
+      escreval("Digite 1 para começar!")
       leia(Comecar)
    fimenquanto
    escreval
-   escreval("OlÃ¡,qual Ã© o seu nome?<(^_^)>")
+   escreval("                 Olá,qual é o seu nome?<(^_^)>")
+   escreval
    leia(NomeJogador)
    limpatela
    escreval
-   escreval("Muito Bem ",NomeJogador,"!Para comeÃ§armos,primeiro,dÃª um nome ao seu Pet!")
+   escreval("Muito Bem ",NomeJogador,"!")
+   escreval
+   escreval("Para começarmos,primeiro,dê um nome ao seu Pet!")
    escreval
    escreval("Nome do Pet:")
+   escreval
    leia(NomePet)
    limpatela
 
-   escreval("Esse Ã© ",NomePet)
-   escreval("       _=,_              ")
-   escreval("    o_/6 /#\             ")
-   escreval("    \__ |##/             ")
-   escreval("     ='|--\              ")
-   escreval("       /   #'-.          ")
-   escreval("       \#|_   _'-. /     ")
-   escreval("        |/ \_( # |       ")
-   escreval("       C/ ,--___/        ")
-
-   escreval("Essas sÃ£o as atribuiÃ§oÃªs atual de seu Pet ",NomePet)
+   escreval("                    Este é ",NomePet,",seu Pet:")
    escreval
+   escreval("                          _=,_              ")
+   escreval("                       o_/6 /#\             ")
+   escreval("                       \__ |##/             ")
+   escreval("                        ='|--\              ")
+   escreval("                          /   #'-.          ")
+   escreval("                          \#|_   _'-. /     ")
+   escreval("                           |/ \_( # |       ")
+   escreval("                          C/ ,--___/        ")
+   escreval
+   escreval
+   escreval("Para ver as atriubuiçoês de ",NomePet," ,digite 2")
+   escreval
+   leia(Comecar2)
+   limpatela
+   enquanto (Comecar2<>2) faca
+      escreval("Para ver as atriubuiçoês de ",NomePet," ,digite 2")
+      escreval
+      leia(Comecar2)
+      limpatela
+   fimenquanto
+
+   escreval("Essas são as atribuições atual de seu Pet ",NomePet,":")
    escreval
    temp<-0
    fome<-0
    felicidade<-5
    limpeza<-10
    idade<-0
-
+   escreval
    escreval("Fome:",fome)
    escreval("Felicidade:",felicidade)
    escreval("Limpeza:",limpeza)
    escreval("Idade(Dias Vivos):",idade)
    escreval
    escreval
+   escreval("Aperte ENTER para ler o Tutorial")
+   escreval
+   escreval
+   leia(ENTER)
+   limpatela
+   escreval("FOME: Começa com o atributo 0,se ele se alimentar sem estar com fome,ele ficará triste (•_•),mas quanto mais aumentar,mais fome ele terá,caso a fome chegue em 10,seu pet ",NomePet,", morrerá _(x.x)_")
+   escreval
+   escreval
+   escreval("Aperte ENTER para prosseguir")
+   escreval
+   escreval
+   leia(ENTER)
+   limpatela
+   escreval("FELICIDADE:Começa com o atributo em 5,brinque com ",NomePet,",ou ele ficará triste e morrerá _(x.x)_")
+   escreval
+   escreval
+   escreval("Aperte ENTER para prosseguir")
+   escreval
+   escreval
+   leia(ENTER)
+   limpatela
+   escreval("LIMPEZA:Começa com o atributo em 10 <(^_^)>,caso ele tomar banho mesmo estando limpo,ele ficará triste e caso ele ficar sujo sem tomar banho,",NomePet," morrerá de sujeira _(x.x)_")
+   escreval
+   escreval
+   escreval("Aperte ENTER para prosseguir")
+   escreval
+   escreval
+   leia(ENTER)
+   limpatela
+   escreval("AVANÇAR O TEMPO:Tome cuidado!Caso deseja escolher esta opção,fique atento aos atributos dado anteriormente,pois quando o tempo é avançado,ele ficará mais sujo(Perdendo 2 pontos),com mais fome(Aumentando em 3 pontos),ele ficará mais triste(Perdendo 2 pontos)e poderá ter a chance de ficar doente.")
+   escreval
+   escreval
+   escreval("Aperte ENTER para prosseguir")
+   escreval
+   escreval
+   leia(ENTER)
+   limpatela
+   escreval("IDADE:A idade máxima de ",NomePet," é de 7 dias,conviva com ele esse tempo e você ganhará <(^_^)>")
+   escreval
+   escreval
+   escreval("Aperte ENTER para começar a se divertir e BOA SORTE!!!  <(^_^)>")
+   escreval
+   escreval
+   leia(ENTER)
+   limpatela
+
    enquanto (idade<7)e(felicidade>0)e(fome<10)e(limpeza>0)e(desligar<>1) faca
+
 
       se (doenca=verdadeiro) entao
          escreval("O ",NomePet," continua doente.")
@@ -94,39 +161,38 @@ Inicio
          escreval
       fimse
 
-      escreval("Escolha uma opÃ§Ã£o a seguir: ")
+
+      escreval("                  Escolha uma opção a seguir: ")
       escreval
-      escreval("1. AvanÃ§ar o tempo")
+      escreval
+      escreval("1. Avançar o tempo")
       escreval("2. Alimentar")
       escreval("3. Jogar")
       escreval("4. Dar banho")
       escreval("5. Ver status")
       escreval("6. Desligar")
-      escreval
-      escreval
       leia(Opcao)
       limpatela
       escolha(Opcao)
 
       caso 1
-          doencaChance <- randi(101)
-          se(doenca=falso)entao
-             se(doencaChance<10) entao
+         doencaChance <- randi(101)
+         se(doenca=falso)entao
+            se(doencaChance <10) entao
                doenca <- verdadeiro
-               escreval(nomePet," estÃ¡ Doente")
+               escreval(nomePet," está Doente")
                chanceCura <- randi(101)
                escreval
-             fimse
-          fimse
-         temp <- temp + 8
+            fimse
+         fimse
          se(doenca = verdadeiro) entao
             tempoDoente<-tempoDoente + 8
-            escreval("A chance dele se curar Ã© de ",chanceCura)
             se(tempoDoente = 8) entao
                se(chanceCura < 33.3) entao
                   doenca <- falso
-                  escreval("A gripe foi curada,apÃ³s 8 horas!")
+                  escreval("O ",NomePet," foi curado,após 8 horas!")
                   tempoDoente<-0
+                  escreval
                   escreval
                fimse
             fimse
@@ -134,20 +200,23 @@ Inicio
             se(tempoDoente = 16) entao
                se(chanceCura < 66.6) entao
                   doenca <- falso
-                  escreval("A gripe foi curada,apÃ³s 16 horas!")
+                  escreval("O ",NomePet," foi curado,após 16 horas!")
                   tempoDoente<-0
+                  escreval
                   escreval
                fimse
             fimse
-            
+
             se(tempoDoente = 24) entao
                doenca <- falso
-               escreval("A gripe foi curada,apÃ³s 24 horas!")
+               escreval("O ",NomePet," foi curado,após 24 horas!")
                tempoDoente<-0
+               escreval
                escreval
             fimse
          fimse
 
+         temp <- temp + 8
          fome<-fome+3
          felicidade<-felicidade-2
          limpeza<-limpeza-2
@@ -157,11 +226,11 @@ Inicio
             //contTempo<-contTempo+1
          fimse
          escreval("Horas do Dias:",temp)
-         escreval("A idade de ",NomePet," agora Ã© ",idade)
+         escreval("A idade de ",NomePet," agora é ",idade)
          escreval
          escreval
 
-         //escreval("A fome de ",NomePet, " Ã© de ",fome)
+         //escreval("A fome de ",NomePet, " é de ",fome)
 
       caso 2
          se(fome=0)entao
@@ -177,78 +246,67 @@ Inicio
             fome<-0
          fimse
 
-
-
-
       caso 3
-         escreval("Vamos Jogar Pedra,Papel ou tesoura!!!")
-         escreval("Escolha qual vai ser sua jogada")
-         escreval("Digite 0 para Pedra/Digite 1 para Papel/Digite 2 para Tesoura")
+         escreval("             Vamos Jogar Pedra,Papel ou tesoura!!!")
          escreval
+         escreval("Escolha qual vai ser sua jogada:")
          escreval
+         escreval("Digite 1 para Pedra.")
+         escreval
+         escreval("Digite 2 para Papel.")
+         escreval
+         escreval("Digite 3 para Tesoura")
          //0 pedra
          //1 papel
          //2 tesoura
+         escreval
+         escreval
          leia(jogadaDono)
+         enquanto (jogadaDono <> 1) e (jogadaDono<>2) e (jogadaDono<>3) faca
+            escreval("Digite novamente qual a sua jogada")
+            escreval("1 para Pedra/2 para Papel/3 para Tesoura")
+            leia(jogadaDono)
+         fimenquanto
+
          jogadaPet<-randi(3)
          se(jogadaDono=jogadaPet)entao
-            escreval("Houve um empate,que pena! (â€¢_â€¢)")
-            escreval
+            escreval("Houve um empate,que pena! (•_•)")
             escreval
             empate<-empate+1
          senao
-            se(jogadaDono=0)e(jogadaPet=1)entao
+            se(jogadaDono=1)e(jogadaPet=2)entao
                escreval(NomeJogador,":Pedra X ",NomePet,":Papel")
-               escreval
                escreval(NomePet," ganhou! <(^_^)> ")
-               escreval
-               escreval
                vitoriaPet<-vitoriaPet+1
                felicidade<-felicidade+5
             senao
-               se(jogadaDono=0)e(jogadaPet=2)entao
+               se(jogadaDono=1)e(jogadaPet=3)entao
                   escreval(NomeJogador,":Pedra X ",NomePet,":Tesoura")
-                  escreval
-                  escreval("ParabÃ©ns,vocÃª ganhou! (â€¢_â€¢)")
-                  escreval
-                  escreval
+                  escreval("Parabéns,você ganhou! (•_•)")
                   vitoriaDono<-vitoriaDono+1
                   felicidade<-felicidade+3
-
                senao
-                  se(jogadaDono=1)e(jogadaPet=0)entao
+                  se(jogadaDono=2)e(jogadaPet=1)entao
                      escreval(NomeJogador,":Papel X ",NomePet,":Pedra")
-                     escreval
-                     escreval("ParabÃ©ns,vocÃª ganhou! (â€¢_â€¢)")
-                     escreval
-                     escreval
+                     escreval("Parabéns,você ganhou! (•_•)")
                      vitoriaDono<-vitoriaDono+1
                      felicidade<-felicidade+3
                   senao
-                     se(jogadaDono=1)e(jogadaPet=2)entao
+                     se(jogadaDono=2)e(jogadaPet=3)entao
                         escreval(NomeJogador,":Papel X ",NomePet,":Tesoura")
-                        escreval
                         escreval(NomePet," ganhou! <(^_^)> ")
-                        escreval
-                        escreval
                         vitoriaPet<-vitoriaPet+1
                         felicidade<-felicidade+5
                      senao
-                        se(jogadaDono=2)e(jogadaPet=0)entao
+                        se(jogadaDono=3)e(jogadaPet=1)entao
                            escreval(NomeJogador,":Tesoura X ",NomePet,":Pedra")
-                           escreval
                            escreval(NomePet," ganhou! <(^_^)> ")
-                           escreval
-                           escreval
                            vitoriaPet<-vitoriaPet+1
                            felicidade<-felicidade+5
                         senao
-                           se(jogadaDono=2)e(jogadaPet=1)entao
+                           se(jogadaDono=3)e(jogadaPet=2)entao
                               escreval(NomeJogador,":Tesoura X ",NomePet,":Papel")
-                              escreval
-                              escreval("ParabÃ©ns,vocÃª ganhou!(â€¢_â€¢)")
-                              escreval
-                              escreval
+                              escreval("Parabéns,você ganhou!(•_•)")
                               vitoriaDono<-vitoriaDono+1
                               felicidade<-felicidade+3
                            fimse
@@ -259,10 +317,9 @@ Inicio
             fimse
          fimse
 
-
       caso 4
          se(limpeza=10)entao
-            escreval("O ",NomePet," ja estava limpo,agora ele ficou triste (â€¢_â€¢)")
+            escreval("O ",NomePet," ja estava limpo,agora ele ficou triste (•_•)")
             felicidade<-felicidade-6
             escreval
             escreval
@@ -270,16 +327,11 @@ Inicio
             escreval("O ",NomePet," esta limpo <(^_^)>")
             limpeza<-10
          fimse
-         escreva
+         escreval
          escreval
 
-
-
-
-
-
       caso 5
-         escreval("O status atual de ",NomePet," Ã© de:")
+         escreval("O status atual de ",NomePet," é de:")
          escreval
          escreval("Fome:",fome)
          se(felicidade>10)entao
@@ -288,7 +340,7 @@ Inicio
          escreval("Felicidade:",felicidade)
          escreval("Limpeza:",limpeza)
          escreval("Idade(Dias Vivos):",idade)
-         escreval("EstatÃ­stica Jogo:",vitoriaDono," vitorias de ",NomeJogador," e ",vitoriaPet," vitorias de ",NomePet)
+         escreval("Estatística Jogo:",vitoriaDono," vitorias de ",NomeJogador," e ",vitoriaPet," vitorias de ",NomePet)
          escreval
          escreval
 
@@ -296,24 +348,28 @@ Inicio
          desligar<-1
          escreval("O YourPet foi encerrado")
 
-
-
-
-
       fimescolha
 
       se(felicidade<0)entao
-         escreval("O ",NomePet," morreu de tristeza _(x.x)_")
-
+         escreval("             O ",NomePet," morreu de tristeza _(x.x)_")
       senao
          se(fome>10)entao
-            escreval("O ",NomePet," morreu de fome _(x.x)_")
+            escreval("           O ",NomePet," morreu de fome _(x.x)_")
          senao
             se(limpeza<0)entao
-               escreval("O ",NomePet," morreu super sujo _(x.x)_")
+               escreval("          O ",NomePet," morreu super sujo _(x.x)_")
             senao
                se(idade=7)entao
-                  escreval("ParabÃ©ns,seu Pet viveu os 7 dias consecutivos!!!Eis um funeral digno _(x.x)_")
+                  escreval("        Parabéns,seu Pet viveu os 7 dias consecutivos!!!Eis um funeral digno _(x.x)_")
+                  escreval
+                  escreval
+                  escreval("Pressione F para prestar respeito ao ",NomePet,".")
+                  escreval
+                  escreval
+                  leia(F)
+                  limpatela
+
+
                fimse
             fimse
          fimse
