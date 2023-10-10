@@ -1,4 +1,6 @@
 Algoritmo "ProjetoPet"
+//
+//
 
 Var
 
@@ -10,7 +12,7 @@ Var
    Comecar2:inteiro
    Opcao:inteiro
    ENTER:caractere
-   F:caractere
+
 
    //atribuiçoes
    desligar:inteiro
@@ -43,7 +45,7 @@ Var
 
 Inicio
 
-   escreval("               Seja Bem Vindo ao MUNDO YourPet!!!")
+   escreval("              Seja Bem Vindo ao MUNDO YourPet!!!")
    escreval
    escreval
    escreval("Digite 1 para começar!")
@@ -55,7 +57,7 @@ Inicio
       leia(Comecar)
    fimenquanto
    escreval
-   escreval("                 Olá,qual é o seu nome?<(^_^)>")
+   escreval("                Olá,qual é o seu nome?<(^_^)>")
    escreval
    leia(NomeJogador)
    limpatela
@@ -69,16 +71,16 @@ Inicio
    leia(NomePet)
    limpatela
 
-   escreval("                    Este é ",NomePet,",seu Pet:")
+   escreval("                Este é ",NomePet,",seu Pet:")
    escreval
-   escreval("                          _=,_              ")
-   escreval("                       o_/6 /#\             ")
-   escreval("                       \__ |##/             ")
-   escreval("                        ='|--\              ")
-   escreval("                          /   #'-.          ")
-   escreval("                          \#|_   _'-. /     ")
-   escreval("                           |/ \_( # |       ")
-   escreval("                          C/ ,--___/        ")
+   escreval("                     _=,_              ")
+   escreval("                  o_/6 /#\             ")
+   escreval("                  \__ |##/             ")
+   escreval("                   ='|--\              ")
+   escreval("                     /   #'-.          ")
+   escreval("                     \#|_   _'-. /     ")
+   escreval("                      |/ \_( # |       ")
+   escreval("                     C/ ,--___/        ")
    escreval
    escreval
    escreval("Para ver as atriubuiçoês de ",NomePet," ,digite 2")
@@ -135,7 +137,7 @@ Inicio
    escreval
    leia(ENTER)
    limpatela
-   escreval("AVANÇAR O TEMPO:Tome cuidado!Caso deseja escolher esta opção,fique atento aos atributos dado anteriormente,pois quando o tempo é avançado,ele ficará mais sujo(Perdendo 2 pontos),com mais fome(Aumentando em 3 pontos),ele ficará mais triste(Perdendo 2 pontos)e poderá ter a chance de ficar doente.")
+   escreval("AVANÇAR O TEMPO:Tome cuidado!Ao escolher esta opção,todas as atribuições de ",NomePet," será modificado,avançando de 8 em 8 horas.")
    escreval
    escreval
    escreval("Aperte ENTER para prosseguir")
@@ -154,6 +156,30 @@ Inicio
 
    enquanto (idade<7)e(felicidade>0)e(fome<10)e(limpeza>0)e(desligar<>1) faca
 
+      se(fome>8)entao
+         escreval("O ",NomePet," esta com fome,alimente-o.")
+         escreval
+         escreval("Pressione ENTER para continuar")
+         leia(ENTER)
+         limpatela
+      fimse
+
+      se(felicidade<4)entao
+         escreval("O ",NomePet," está triste,brinque com ele!")
+         escreval
+         escreval("Pressione ENTER para continuar")
+         leia(ENTER)
+         limpatela
+      fimse
+
+      se(limpeza<4)entao
+         escreval("O ",NomePet," está bem sujo,dê um banho a ele!")
+         escreval
+         escreval("Pressione ENTER para continuar")
+         leia(ENTER)
+         limpatela
+      fimse
+
 
       se (doenca=verdadeiro) entao
          escreval("O ",NomePet," continua doente.")
@@ -162,7 +188,7 @@ Inicio
       fimse
 
 
-      escreval("                  Escolha uma opção a seguir: ")
+      escreval("Escolha uma opção a seguir: ")
       escreval
       escreval
       escreval("1. Avançar o tempo")
@@ -171,20 +197,14 @@ Inicio
       escreval("4. Dar banho")
       escreval("5. Ver status")
       escreval("6. Desligar")
+      escreval
+      escreval
       leia(Opcao)
       limpatela
       escolha(Opcao)
 
       caso 1
-         doencaChance <- randi(101)
-         se(doenca=falso)entao
-            se(doencaChance <10) entao
-               doenca <- verdadeiro
-               escreval(nomePet," está Doente")
-               chanceCura <- randi(101)
-               escreval
-            fimse
-         fimse
+
          se(doenca = verdadeiro) entao
             tempoDoente<-tempoDoente + 8
             se(tempoDoente = 8) entao
@@ -196,7 +216,15 @@ Inicio
                   escreval
                fimse
             fimse
-
+            doencaChance <- randi(101)
+            se(doenca=falso)entao
+               se(doencaChance <10) entao
+                  doenca <- verdadeiro
+                  escreval(nomePet," está Doente")
+                  chanceCura <- randi(101)
+                  escreval
+               fimse
+            fimse
             se(tempoDoente = 16) entao
                se(chanceCura < 66.6) entao
                   doenca <- falso
@@ -247,7 +275,7 @@ Inicio
          fimse
 
       caso 3
-         escreval("             Vamos Jogar Pedra,Papel ou tesoura!!!")
+         escreval("Vamos Jogar Pedra,Papel ou tesoura!!!")
          escreval
          escreval("Escolha qual vai ser sua jogada:")
          escreval
@@ -268,7 +296,7 @@ Inicio
             leia(jogadaDono)
          fimenquanto
 
-         jogadaPet<-randi(3)
+         jogadaPet<-randi(3)+1
          se(jogadaDono=jogadaPet)entao
             escreval("Houve um empate,que pena! (•_•)")
             escreval
@@ -351,30 +379,51 @@ Inicio
       fimescolha
 
       se(felicidade<0)entao
-         escreval("             O ",NomePet," morreu de tristeza _(x.x)_")
+         escreval("O ",NomePet," morreu de tristeza _(x.x)_")
+         escreval
+         escreval("Pressione ENTER para continuar.")
+         escreval
+         leia(ENTER)
+         limpatela
       senao
          se(fome>10)entao
-            escreval("           O ",NomePet," morreu de fome _(x.x)_")
+            escreval("O ",NomePet," morreu de fome _(x.x)_")
+            escreval
+            escreval("Pressione ENTER para continuar.")
+            escreval
+            leia(ENTER)
+            limpatela
          senao
             se(limpeza<0)entao
-               escreval("          O ",NomePet," morreu super sujo _(x.x)_")
+               escreval("O ",NomePet," morreu super sujo _(x.x)_")
+               escreval
+               escreval("Pressione ENTER para continuar.")
+               escreval
+               leia(ENTER)
+               limpatela
             senao
                se(idade=7)entao
-                  escreval("        Parabéns,seu Pet viveu os 7 dias consecutivos!!!Eis um funeral digno _(x.x)_")
+                  escreval("Parabéns,seu Pet viveu os 7 dias consecutivos!!!Eis um funeral digno _(x.x)_")
                   escreval
                   escreval
-                  escreval("Pressione F para prestar respeito ao ",NomePet,".")
+                  escreval("Pressione ENTER para continuar.")
                   escreval
-                  escreval
-                  leia(F)
+                  leia(ENTER)
                   limpatela
-
-
                fimse
             fimse
          fimse
       fimse
    fimenquanto
+   escreval("                            CRÉDITOS:")
+   escreval
+   escreval
+   escreval("                   EQUIPE DE DESENVOLVIMENTO:")
+   escreval
+   escreval("                      Lucas Amaral Luciano")
+   escreval("                         Pablo Vinicius")
+   escreval("                      Cristiano Rodrigues")
+   escreval("                         Saulo Carvalho")
 
 
 Fimalgoritmo
