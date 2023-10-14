@@ -1,6 +1,13 @@
 Algoritmo "ProjetoPet"
-//
-//
+
+//Análise e Desenvolvimento de Sistemas - 1° Período
+
+//Nome Do Grupo de Desenvolvimento:  CODEX.
+
+//Integrantes do grupo:Lucas Amaral Luciano
+//                     Pablo Vinicius
+//                     Saulo Carvalho
+//                     Cristiano Rodrigues
 
 Var
 
@@ -251,14 +258,14 @@ Inicio
          se(temp=24)entao
             temp<-0
             idade<-idade+1
-            //contTempo<-contTempo+1
+
          fimse
          escreval("Horas do Dias:",temp)
          escreval("A idade de ",NomePet," agora é ",idade)
          escreval
          escreval
 
-         //escreval("A fome de ",NomePet, " é de ",fome)
+
 
       caso 2
          se(fome=0)entao
@@ -418,7 +425,7 @@ Inicio
    escreval("                            CRÉDITOS:")
    escreval
    escreval
-   escreval("                   EQUIPE DE DESENVOLVIMENTO:")
+   escreval("                 EQUIPE DE DESENVOLVIMENTO:CODEX")
    escreval
    escreval("                      Lucas Amaral Luciano")
    escreval("                         Pablo Vinicius")
